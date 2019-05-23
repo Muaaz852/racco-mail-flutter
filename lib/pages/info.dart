@@ -32,6 +32,7 @@ class InfoPage extends StatelessWidget {
         url: 'https://www.raccomail.it/app/info.html',
         hidden: true,
         withJavascript: true,
+	withZoom: true,
       ),
     );
   }

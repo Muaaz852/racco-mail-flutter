@@ -21,8 +21,9 @@ class PrivacyPage extends StatelessWidget {
       ),
       body: WebviewScaffold(
         url: 'https://www.raccomail.it/app/privacy.html',
-        hidden: false,
+        hidden: true,
         withJavascript: true,
+	withZoom: true,
       ),
     );
   }

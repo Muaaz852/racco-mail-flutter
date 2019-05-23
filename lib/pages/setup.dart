@@ -546,8 +546,8 @@ class _SetupPageState extends State<SetupPage> {
     if (!mounted) return;
 
     setState(() {
-      if (filesSize >= 10000) {
-        _showSnackBar('Limite dimensioni superato. Limite: 10Mb');
+      if (filesSize >= 20000) {
+        _showSnackBar('Limite dimensioni superato. Limite: 20Mb');
         _filePaths.removeWhere((key, value) => true);
       }
 
@@ -589,8 +589,8 @@ class _SetupPageState extends State<SetupPage> {
         filesSize += _convertBytesToKb(File(value.toString()).lengthSync()));
 
     setState(() {
-      if (filesSize >= 10000) {
-        _showSnackBar('Limite dimensioni superato. Limite: 10Mb');
+      if (filesSize >= 20000) {
+        _showSnackBar('Limite dimensioni superato. Limite: 20Mb');
         _filePaths.removeWhere((key, value) => true);
       }
     });
@@ -729,6 +729,8 @@ class _SetupPageState extends State<SetupPage> {
     } else {
       _showSnackBar('Errore durante l\'invio di e-mail');
     }
+    
+    print(response.data.toString());
   }
 
   /// This is a utility function which converts the given bytes into kilobytes;

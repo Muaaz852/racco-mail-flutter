@@ -30,8 +30,9 @@ class SearchPECMailPage extends StatelessWidget {
       ),
       body: WebviewScaffold(
         url: 'https://www.raccomail.it/app/cercapec.html',
-        hidden: false,
+        hidden: true,
         withJavascript: true,
+	withZoom: true,
       ),
     );
   }

@@ -22,15 +22,35 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Needs access to camera to capture new photos or videos.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Needs access to microphone to record voices or audio.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Needs access to photo library to select and import photos to app.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UIFileSharingEnabled</key>
+	<string>YES</string>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<string>YES</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,13 +61,6 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIBackgroundModes</key>
-	<array>
-	    <string>fetch</string>
-	    <string>remote-notification</string>
-    </array>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>Need access to photo library to select and import photos to app</string>
 	<key>io.flutter.embedded_views_preview</key>
 	<string>YES</string>
 </dict>
